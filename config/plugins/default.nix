@@ -61,6 +61,7 @@ in{
         ./lualine.nix
         ./trouble.nix
         ./todo-comments.nix
+        ./opencode.nix
     ];
 
 }
