@@ -1,6 +1,5 @@
 /*
     TODO: Missing plugins
-    conform
     gitsigns
     harpoon ? (no)
     nvim-lint
@@ -55,6 +54,7 @@ in{
 
     imports = [
         ./blink.nix
+        ./conform.nix
         ./oil.nix
         ./treesitter.nix
         ./telescope.nix
