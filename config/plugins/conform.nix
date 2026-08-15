@@ -18,6 +18,7 @@
         nix = [
           "nixfmt"
         ];
+
         "_" = [
           "trim_whitespace"
           "trim_newlines"
@@ -40,6 +41,10 @@
           __unkeyed-2 = "prettier";
           stop_after_first = true;
         };
+
+        rust = [
+          "rustfmt"
+        ];
       };
     };
   };
