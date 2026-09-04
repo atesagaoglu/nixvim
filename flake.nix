@@ -46,7 +46,7 @@
 
           packages = {
             default = pkgs.writeShellScriptBin "nx" ''
-              export NVIM_APPNAME=nvim
+              export NVIM_APPNAME=nixvim
               exec ${nx}/bin/nvim "$@"
             '';
           };
