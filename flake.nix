@@ -8,7 +8,12 @@
   };
 
   outputs =
-    { nixvim, flake-parts, nixpkgs, ... }@inputs:
+    {
+      nixvim,
+      flake-parts,
+      nixpkgs,
+      ...
+    }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [
         "x86_64-linux"
@@ -41,12 +46,14 @@
 
           packages = {
             # Lets you run `nix run .` to start nixvim
-            default = nx;
+            default = pkgs.writeShellScriptBin "nx" ''
+              exec ${nx}/bin/nvim "$@"
+            '';
           };
         };
 
       flake = {
         homeManagerModules.default = import ./config;
-      }; 
+      };
     };
 }
