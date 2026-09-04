@@ -45,8 +45,8 @@
           };
 
           packages = {
-            # Lets you run `nix run .` to start nixvim
             default = pkgs.writeShellScriptBin "nx" ''
+              export NVIM_APPNAME=nvim
               exec ${nx}/bin/nvim "$@"
             '';
           };
